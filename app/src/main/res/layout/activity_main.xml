@@ -9,11 +9,39 @@
 
     <Button
         android:id="@+id/sign_out"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="21dp"
         android:layout_marginTop="17dp"
-        android:text="Sign out" />
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/sign_out" />
+
+    <ImageView
+        android:id="@+id/logo_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/sign_out"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/logo"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logo_main"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/listViewItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
 </RelativeLayout>
